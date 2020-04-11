@@ -1,0 +1,61 @@
+.laptop-img {
+  background: linear-gradient(45deg $red1 20% $blue 100% 0.5);
+
+  max-width: 20rem;
+  height: auto;
+  position: relative;
+
+  @include mq(pc) {
+    max-width: 40rem;
+  }
+  @include mq(opc) {
+    max-width: 30rem;
+  }
+  @include mq(bpc) {
+    max-width: 100%;
+  }
+}
+.hero-img {
+  position: absolute;
+  top: 5%;
+  width: 80%;
+  height: auto;
+  img {
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+}
+
+.hero-section > .container {
+  p {
+    font-size: 1.25rem;
+  }
+  @include space;
+
+  @include mq(bpc) {
+    @include dir($rr);
+    min-height: 100vh;
+  }
+}
+
+.hero-content {
+  @include space;
+  width: 100%;
+  @include mq(bpc) {
+    text-align: left;
+    width: 50%;
+    padding-right: 3rem;
+    align-items: start;
+    h2 {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.hero-display {
+  width: 100%;
+  @include mq(bpc) {
+    width: 50%;
+  }
+}

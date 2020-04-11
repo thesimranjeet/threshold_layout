@@ -1,0 +1,97 @@
+// Flex Properties
+// j = justify
+// a = align
+// i = items
+// c = content
+
+[class*="flex"] {
+  display: flex;
+}
+
+.flex-ji-center {
+  justify-items: center;
+}
+.flex-jc-center {
+  justify-content: center;
+}
+.flex-ai-center {
+  align-items: center;
+}
+.flex-ac-center {
+  align-content: center;
+}
+
+.flex-ji-start {
+  justify-items: start;
+}
+.flex-jc-start {
+  justify-content: start;
+}
+.flex-ai-start {
+  align-items: start;
+}
+.flex-ac-start {
+  align-content: start;
+}
+
+.flex-ji-end {
+  justify-items: end;
+}
+.flex-jc-end {
+  justify-content: end;
+}
+.flex-ai-end {
+  align-items: end;
+}
+.flex-ac-end {
+  align-content: end;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-sa {
+  justify-content: space-around;
+}
+
+.flex-jc-se {
+  justify-content: space-evenly;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+.flex-col-r {
+  flex-direction: column-reverse;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+.flex-row-r {
+  flex-direction: row-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+// @include flex(1);
+@mixin flex($i) {
+  flex: $i;
+}
+
+// // @include flex(1 1 100%);
+// @mixin flex($grow, $shrinl, $basis) {
+//   flex: $grow $shrinl $basis;
+// }
+
+// @include flex-basis(1);
+@mixin flex-basis($basis) {
+  flex-basis: $basis;
+}
+
+@mixin dir($dir) {
+  flex-direction: $dir;
+}

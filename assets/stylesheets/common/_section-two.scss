@@ -1,0 +1,21 @@
+.section-two > .container {
+  @include space-a(1rem);
+  @include mq(pc) {
+    @include dir($r);
+  }
+}
+.feature {
+  padding: 2rem;
+  @include space(0.5rem);
+
+  @include mq(pc) {
+    @include flex-basis(50%);
+  }
+  @include mq(opc) {
+    @include flex-basis(33%);
+  }
+}
+
+.section-two .icon {
+  margin-bottom: 1.5rem;
+}

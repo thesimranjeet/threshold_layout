@@ -1,0 +1,41 @@
+.logo {
+  color: $white;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.toggle {
+  display: none;
+}
+.menu-icon {
+  padding: 1rem;
+  @include mq(opc) {
+    display: none;
+  }
+}
+.menu-icon:hover {
+  color: $white;
+}
+
+.menu {
+  @include mq(nopc) {
+    display: none;
+  }
+}
+
+.active {
+  color: $white;
+  border-bottom: 2px solid $red1;
+  font-weight: 700;
+}
+
+.menu-item {
+  margin: 0 1rem;
+  padding: 0.5rem;
+  i {
+    padding-right: 0.5rem;
+  }
+}
+.menu-item:hover {
+  cursor: pointer;
+  color: $white;
+}

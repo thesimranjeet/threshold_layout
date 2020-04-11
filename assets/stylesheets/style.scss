@@ -1,0 +1,28 @@
+// css reset
+@import "./lib/reset";
+// base
+@import "./lib/base";
+// Flex
+@import "./lib/flex";
+// Grid
+@import "./lib/grid";
+
+// Variables
+@import "./common/vars";
+// general classes
+@import "./common/general";
+
+// Header
+@import "./common/header";
+
+// Add other stylessheets here
+@import "./common/main-section";
+
+@import "./common/section-one";
+
+@import "./common/section-two";
+
+@import "./common/section-three";
+
+//footer
+@import "./common/footer";

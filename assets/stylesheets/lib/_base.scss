@@ -1,0 +1,118 @@
+// omob - only mobile
+// pc - mixed tab or small pc screen
+// opc - only pc
+// bpc - big pc
+
+@mixin mq($view) {
+  @if $view == omob {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+  @if $view == tab {
+    @media (min-width: 480px) {
+      @content;
+    }
+  } @else if $view == pc {
+    @media (min-width: 737px) {
+      @content;
+    }
+  } @else if $view == nopc {
+    @media (max-width: 980px) {
+      @content;
+    }
+  } @else if $view == opc {
+    @media (min-width: 980px) {
+      @content;
+    }
+  } @else if $view == bpc {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*Base styles*/
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+body {
+  line-height: 1.5;
+  font-weight: 300;
+}
+h1 {
+  font-size: 3rem;
+  @include mq(mob) {
+    font-size: 2.5rem;
+  }
+  @include mq(tab) {
+    font-size: 2.7rem;
+  }
+}
+h2 {
+  font-size: 2.5rem;
+  @include mq(mob) {
+    font-size: 2.1rem;
+  }
+  @include mq(tab) {
+    font-size: 2.3rem;
+  }
+}
+h3 {
+  font-size: 2rem;
+  @include mq(mob) {
+    font-size: 1.6rem;
+  }
+  @include mq(tab) {
+    font-size: 1.8rem;
+  }
+}
+h4 {
+  font-size: 1.5rem;
+  @include mq(mob) {
+    font-size: 1.2rem;
+  }
+  @include mq(tab) {
+    font-size: 1.3rem;
+  }
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.75rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+p {
+  font-size: 1rem;
+}
+/*Align text*/
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+a:any-link {
+  text-decoration: none;
+}
+
+@mixin border($radius) {
+  border-radius: $radius;
+}

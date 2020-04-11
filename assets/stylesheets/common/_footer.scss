@@ -1,0 +1,78 @@
+section {
+  width: 100%;
+}
+.footer {
+  header {
+    @include space;
+    @include mq(opc) {
+      padding: 0 4rem;
+    }
+  }
+  .container {
+    @include space(3rem);
+    @include mq(opc) {
+      max-width: 70%;
+    }
+  }
+}
+
+.form-cont {
+  @include space;
+
+  .input-cont {
+    width: 100%;
+    @include space;
+  }
+
+  input[type="email"],
+  input[type="text"],
+  textarea {
+    @include border($radius);
+    border: 2px solid $grey2;
+    width: 100%;
+    line-height: inherit;
+    font: inherit;
+    padding: 1rem;
+    box-sizing: inherit;
+  }
+  input[type="email"],
+  input[type="text"] {
+    @include mq(pc) {
+      width: 48%;
+    }
+  }
+}
+
+.contact-info {
+  @include space-a;
+  @include mq(pc) {
+    flex-direction: $r;
+    justify-content: space-around;
+  }
+}
+
+.contact {
+  justify-content: start;
+  width: 18rem;
+  .icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    border-width: 3px;
+    @include border(1rem);
+    margin-right: 2rem;
+  }
+  @include mq(pc) {
+    flex-basis: 40%;
+  }
+  a {
+    color: inherit;
+  }
+}
+
+.copyright {
+  padding-bottom: 2rem;
+  @include mq(pc) {
+    padding-bottom: 5rem;
+  }
+}

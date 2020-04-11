@@ -1,0 +1,160 @@
+@mixin space($s: 1rem) {
+  > * {
+    margin-bottom: $s;
+  }
+  @include mq(tab) {
+    > * {
+      margin-bottom: 2 * $s;
+    }
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+@mixin space-a($s: 1rem) {
+  > * {
+    margin-bottom: $s;
+  }
+  @include mq(tab) {
+    > * {
+      margin-bottom: 2 * $s;
+    }
+  }
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+  padding: 1rem 0;
+  @include mq(opc) {
+    max-width: 90%;
+  }
+}
+body {
+  background-color: $black;
+  color: $white2;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+  text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $white;
+}
+
+img {
+  width: 100%;
+}
+
+.gradient::before {
+  z-index: 1;
+  opacity: 0.6;
+  display: block;
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, $red1, $blue);
+}
+
+.button {
+  position: relative;
+  // min-width: 15rem;
+  background-color: $red1;
+  overflow: hidden;
+  color: $white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding-left: 1.5rem;
+  padding-right: 5.1rem;
+  line-height: 3.6rem;
+  @include border($radius);
+}
+
+.button {
+  width: 100%;
+  @include mq(tab) {
+    width: auto;
+  }
+  text-align: center;
+}
+.button::after {
+  position: absolute;
+  background-color: $red2;
+  @include flex(2);
+  color: $red3;
+  content: "\f061";
+  font-family: "Font Awesome 5 Free";
+  right: 0;
+  top: 0;
+  width: 3.6rem;
+  height: 100%;
+  text-align: center;
+  z-index: 1;
+  // opacity: 0.5;
+}
+
+.button:hover {
+  background-color: lighten($red1, 5%);
+}
+.button:hover::after {
+  background-color: lighten($red2, 5%);
+}
+a.button.small {
+  font-size: 1rem;
+  line-height: 3rem;
+  padding-left: 1rem;
+  padding-right: 4rem;
+}
+
+.button.small::after {
+  width: 3rem;
+}
+.button.button-black {
+  background-color: $grey;
+  box-shadow: inset 0 0 0 4px $grey3;
+}
+.button.button-black:hover {
+  background-color: lighten($grey, 5%);
+  box-shadow: inset 0 0 0 4px lighten($grey3, 5%);
+}
+.button-black::after {
+  background-color: $grey3;
+  color: $grey;
+}
+.button-black:hover::after {
+  background-color: lighten($grey3, 5%);
+}
+section > .container {
+  padding: 2rem 0;
+}
+
+[class*="section-"] {
+  background: $black2;
+}
+
+.icon {
+  width: 4rem;
+  height: 4rem;
+  @include border($radius);
+  color: $red1;
+  line-height: 4rem;
+  font-size: 1.8rem;
+  border: 2px solid $grey2;
+  transform: rotate(45deg);
+  i {
+    transform: rotate(-45deg);
+  }
+}
+a:hover {
+  color: $white;
+}

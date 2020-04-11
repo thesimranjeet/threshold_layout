@@ -1,0 +1,37 @@
+.section-three {
+  z-index: 0;
+  position: relative;
+  .card {
+    min-height: 50vh;
+  }
+  .content {
+    @include mq(opc) {
+      text-align: left;
+      align-items: start;
+      width: 65%;
+    }
+  }
+  .button {
+    max-width: 24rem;
+    width: 100%;
+  }
+}
+.section-three::before {
+  width: 100%;
+  content: "";
+  background-color: $black;
+  height: 40vh;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+.btn-cont {
+  width: 100%;
+  padding: 2rem;
+  @include space;
+  @include mq(opc) {
+    width: 35%;
+  }
+}

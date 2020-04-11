@@ -1,0 +1,60 @@
+.section-one > .container {
+  @include space(3rem);
+}
+
+.section-one {
+  position: relative;
+  z-index: 1;
+}
+.section-one::before {
+  width: 100%;
+  content: "";
+  background-color: $black;
+  height: 40vh;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.card {
+  @include border($radius);
+  // align-items: stretch;
+  overflow: hidden;
+  background-color: $grey;
+  @include mq(opc) {
+    @include dir($r);
+  }
+}
+.card:nth-of-type(2) {
+  @include mq(opc) {
+    @include dir($rr);
+  }
+}
+
+.img-cont {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  @include mq(nopc) {
+    max-height: 20rem;
+  }
+  @include mq(opc) {
+    min-width: 40%;
+  }
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.content {
+  height: auto;
+  padding: 2rem;
+  @include space;
+  @include mq(opc) {
+    padding: 4rem;
+    text-align: left;
+    align-items: start;
+  }
+}
